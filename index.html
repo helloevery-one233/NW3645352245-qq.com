@@ -2,20 +2,106 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>欢迎来到河北工程大学科信学院</title>
 <style>
-top-img{display:block;margin:0 auto;width: 75%;height: auto;}
-body{text-align:center;padding:30px;font-size:18px;
-background-image: url("images/beijing.jpg");background-size: cover;}
-button{width:80%;padding:15px;margin:10px 0;font-size:18px}
+/* 添加移动端适配 */
+.top-img {
+    display: block;
+    margin: 0 auto;
+    width: 90%; /* 移动端调整为更适配的宽度 */
+    max-width: 800px; /* 限制最大宽度，避免大屏拉伸 */
+    height: auto;
+}
+
+body {
+    text-align: center;
+    padding: 20px 5%; /* 用百分比内边距适配不同屏幕 */
+    font-size: 18px;
+    line-height: 1.6; /* 增加行高提升移动端阅读体验 */
+    margin: 0; /* 清除默认边距 */
+    background-image: url("images/beijing.jpg");
+    background-size: cover;
+    background-attachment: fixed; /* 背景固定，提升体验 */
+}
+
+button {
+    width: 90%; /* 移动端加宽按钮 */
+    max-width: 500px; /* 限制按钮最大宽度 */
+    padding: 15px;
+    margin: 15px auto; /* 居中并增加间距 */
+    font-size: 18px;
+    border: none;
+    border-radius: 8px; /* 圆角美化 */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    display: block; /* 确保按钮独占一行 */
+}
+
+button:hover {
+    background-color: #0056b3; /* 悬停效果 */
+}
+
+/* 新增板块样式 */
+.section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 轻微阴影提升层次感 */
+}
+
+.section h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* 地址样式 */
+.address {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 </style>
 </head>
 <body>
-<img src="images/xiaohui.jpg"alt="顶部图"class="top-img">
-<button onclick="open('https://jwglxxfwpt.hebeu.edu.cn','_blank')">教育平台</button>
-<!--button onclick="open('https://www.bilibili.com')">B站</button>
-<button onclick="open('https://www.qq.com')">QQ</button-->
-<h1>学校地址是：河北省邯郸市邯山区 罗城头街道光明南大街199号河北工程大学科信学院,欢迎同学们提前将行李邮寄到学校</h1>
+    <!-- 顶部图片 -->
+    <img src="images/xiaohui.jpg" alt="河北工程大学科信学院" class="top-img">
+
+    <!-- 功能按钮 -->
+    <button onclick="window.open('https://jwglxxfwpt.hebeu.edu.cn','_blank')">教育平台</button>
+
+    <!-- 学长经历分享板块（预留空间） -->
+    <div class="section">
+        <h2>学长学姐经历分享</h2>
+        <p>这里将展示学长学姐的校园生活、学习经验、就业分享等内容，敬请期待...</p>
+        <!-- 后续可在此添加具体内容，如文章列表、卡片等 -->
+    </div>
+
+    <!-- 校园风景展示板块（预留空间） -->
+    <div class="section">
+        <h2>校园风景展示</h2>
+        <p>这里将展示校园的美丽风光、教学楼、宿舍、食堂等实景照片，敬请期待...</p>
+        <!-- 后续可在此添加图片轮播、相册等内容 -->
+    </div>
+
+    <!-- 学校地址（移至最底部） -->
+    <div class="address">
+        <h3>学校地址</h3>
+        <p>河北省邯郸市邯山区 罗城头街道光明南大街199号河北工程大学科信学院</p>
+        <p>欢迎同学们提前将行李邮寄到学校</p>
+    </div>
 </body>
 </html>
